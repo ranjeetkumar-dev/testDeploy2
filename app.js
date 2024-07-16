@@ -12,6 +12,10 @@ const app = express();
 //middlewere
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Book Store");
+});
+
 app.use("/api", User);
 app.use("/api", Book);
 app.use("/api", Favorite);
